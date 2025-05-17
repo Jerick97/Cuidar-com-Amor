@@ -1,0 +1,34 @@
+# Entorno virtual
+venv/
+ENV/
+env/
+.venv/
+
+# Archivos de Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de configuración
+*.env
+.env
+
+# Archivos de log y bases de datos temporales
+*.log
+*.sqlite3
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación de Tailwind (opcional)
+*.css.map
+node_modules/
+dist/
+
+# Archivos de editor
+.vscode/
+.idea/
+
+# PyCharm
+*.iml
