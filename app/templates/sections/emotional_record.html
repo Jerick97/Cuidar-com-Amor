@@ -1,0 +1,133 @@
+{% block content %}
+<section class="container-fluid py-5 bg-body-secondary">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Registro Emocional</h2>
+        <p class="text-muted">Registra emociones, momentos importantes y pensamientos que quieras recordar sobre tus
+            seres queridos.</p>
+    </div>
+
+    <div class="row g-4 ps-2">
+        <!-- Notas y Emociones -->
+        <div class="col-lg-7 bg-white rounded p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0 fw-bold">Notas y Emociones</h5>
+                <a href="#" class="text-primary"><i class="bi bi-plus-lg"></i></a>
+            </div>
+
+            <!-- Nota 1 -->
+            <div class="rounded p-3 mb-3 border-primario">
+                <div class="d-flex justify-content-between">
+                    <strong>Abuela Isabel - Alegría</strong>
+                    <small class="text-muted">Hace 2 días</small>
+                </div>
+                <p class="small text-muted mt-2 mb-2">
+                    Hoy la abuela estaba muy feliz recordando su juventud. Me contó historias sobre cómo conoció al
+                    abuelo y sus primeras citas. Nunca la había visto sonreír tanto.
+                </p>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="fs-5">😊</span>
+                    <small class="text-primary fw-semibold">Alegría</small>
+                </div>
+            </div>
+
+            <!-- Nota 2 -->
+            <div class="rounded p-3 mb-3 border-secundario">
+                <div class="d-flex justify-content-between">
+                    <strong>Abuelo Roberto - Nostalgia</strong>
+                    <small class="text-muted">Hace 5 días</small>
+                </div>
+                <p class="small text-muted mt-2 mb-2">
+                    El abuelo estuvo mirando fotos antiguas hoy. Se emocionó al ver imágenes de su juventud. Mencionó
+                    que le gustaría visitar su pueblo natal alguna vez más.
+                </p>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="fs-5">😔</span>
+                    <small class="text-warning fw-semibold">Nostalgia</small>
+                </div>
+            </div>
+
+            <!-- Nota 3 -->
+            <div class="rounded p-3 mb-3 border-terciario">
+                <div class="d-flex justify-content-between">
+                    <strong>Abuela Isabel - Satisfacción</strong>
+                    <small class="text-muted">Hace 1 semana</small>
+                </div>
+                <p class="small text-muted mt-2 mb-2">
+                    La abuela disfrutó mucho de la visita de sus nietos pequeños. Estuvo toda la tarde contándoles
+                    cuentos y enseñándoles a hacer galletas. Se sentía muy útil y feliz.
+                </p>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="fs-5">😊</span>
+                    <small class="text-success fw-semibold">Satisfacción</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat con Gemini -->
+        <div class="col-lg-5">
+            <div class="bg-white border rounded p-3 h-100 d-flex flex-column shadow-sm">
+                <!-- Cabecera -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="mb-0 fw-bold">Conversación con Gemini</h6>
+                    <div class="rounded-circle bg-light p-2 d-flex align-items-center justify-content-center"
+                        style="width: 32px; height: 32px;">
+                        <i class="bi bi-robot text-primary"></i>
+                    </div>
+                </div>
+
+                <!-- Mensajes -->
+                <div class="flex-grow-1 overflow-auto mb-3 px-1" style="max-height: 420px;">
+
+                    <!-- Mensaje del asistente -->
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="rounded-circle bg-light p-2 me-2" style="width: 32px; height: 32px;">
+                            <i class="bi bi-robot text-primary"></i>
+                        </div>
+                        <div class="bg-light-subtle text-dark rounded-3 p-3 shadow-sm" style="max-width: 80%;">
+                            <small>Hola Laura, ¿cómo puedo ayudarte hoy con el cuidado de tus abuelos?</small>
+                        </div>
+                    </div>
+
+                    <!-- Mensaje del usuario -->
+                    <div class="d-flex justify-content-end align-items-start mb-3">
+                        <div class="bg-primary text-white rounded-3 p-3 shadow-sm text-start" style="max-width: 80%;">
+                            <small>Necesito recordar cuándo fue la última vez que el abuelo Roberto tomó su medicación
+                                para la artritis.</small>
+                        </div>
+                        <div class="rounded-circle bg-light p-2 ms-2" style="width: 32px; height: 32px;">
+                            <span class="fw-bold text-primary small d-block text-center">JR</span>
+                        </div>
+                    </div>
+
+                    <!-- Otro mensaje del asistente -->
+                    <div class="d-flex align-items-start">
+                        <div class="rounded-circle bg-light p-2 me-2" style="width: 32px; height: 32px;">
+                            <i class="bi bi-robot text-primary"></i>
+                        </div>
+                        <div class="bg-light-subtle text-dark rounded-3 p-3 shadow-sm" style="max-width: 80%;">
+                            <small>
+                                Según los registros, el abuelo Roberto tomó su medicación para la artritis ayer a las
+                                9:30 AM.
+                                ¿Quieres que te recuerde algo más sobre su tratamiento?
+                            </small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Input de mensaje -->
+                <div class="border-top pt-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-0 shadow-none"
+                            placeholder="Escribe tu mensaje...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    {% endblock %}
