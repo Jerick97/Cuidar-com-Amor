@@ -144,3 +144,11 @@ body {
 	background-color: rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
 }
+
+.bg-light-subtle {
+	background-color: rgba(99, 102, 241, 0.05); /* fondo lavanda claro */
+}
+
+.bg-purple {
+	background-color: #a78bfa; /* para MP */
+}
