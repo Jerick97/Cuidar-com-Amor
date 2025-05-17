@@ -1,1 +1,113 @@
-body { font-family: sans-serif; }
+body {
+	font-family: "Pacifico";
+}
+.navbar-nav .nav-link {
+	color: #000;
+	font-weight: 500;
+}
+.navbar-nav .nav-link:hover {
+	color: rgb(99, 102, 241);
+}
+
+.hero-section {
+	position: relative;
+	min-height: 480px;
+	background: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 0.98) 0%,
+			rgba(255, 255, 255, 0.85) 40%,
+			rgba(255, 255, 255, 0.1) 70%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		url("../img/hero.jpg") no-repeat right center;
+	background-size: cover;
+	z-index: 0;
+}
+
+#calendar {
+	background-color: #ffffff;
+	border-radius: 16px;
+	padding: 1rem;
+	max-height: 500px; /* Limita la altura general */
+	overflow: hidden;
+}
+
+/* Altura de celdas */
+.fc .fc-daygrid-day-frame {
+	min-height: 60px; /* Más compacto */
+}
+
+/* Estilo limpio para el texto del día */
+.fc-daygrid-day-number {
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: #6b7280;
+}
+
+/* Evento estilo chip con varias líneas si es necesario */
+.fc-event {
+	display: block !important;
+	padding: 6px 8px;
+	border-radius: 8px;
+	background-color: rgba(99, 102, 241, 0.1);
+	border: none;
+	word-break: break-word;
+}
+
+.fc-col-header-cell-cushion {
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: #4b5563;
+}
+
+.fc-event-time {
+	display: block;
+	font-size: 0.75rem;
+	color: #4f46e5;
+	font-weight: 500;
+	margin-bottom: 2px;
+}
+
+.fc-event-title {
+	display: block;
+	font-size: 0.75rem;
+	color: #3730a3;
+	font-weight: 600;
+	white-space: normal !important;
+	line-height: 1.2;
+}
+
+.fc-button-primary {
+	background-color: #f4f4f5 !important; /* Gris claro */
+	color: #1e1e1e !important; /* Texto negro */
+	border: none !important;
+	font-weight: 500;
+}
+
+.fc-button-primary:hover {
+	background-color: #e4e4e7 !important; /* Un poco más oscuro */
+	color: #1e1e1e !important;
+}
+
+/* Punto de estado */
+.dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.rounded-circle i {
+	font-size: 14px;
+}
+
+/* Mejora visual para íconos en burbujas */
+.rounded-circle i {
+	font-size: 1rem;
+}
+
+/* Ajustes suaves para badges si usas texto largo */
+.badge {
+	font-size: 0.75rem;
+	padding: 0.35em 0.6em;
+}

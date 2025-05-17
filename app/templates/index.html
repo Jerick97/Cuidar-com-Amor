@@ -1,6 +1,12 @@
 {% extends 'layout.html' %}
-{% block title %}Inicio{% endblock %}
+
+{% block hero %}
+{% include 'sections/hero.html' %}
+{% endblock %}
+
 {% block content %}
-<h1 class="mb-4">Bienvenido a Cuidar com Amor</h1>
-<p>Desde aquí puedes organizar el cuidado de tus abuelos con ayuda de la inteligencia artificial.</p>
+{% include 'sections/calendar.html' %}
+{% include 'sections/features.html' %}
+
+
 {% endblock %}

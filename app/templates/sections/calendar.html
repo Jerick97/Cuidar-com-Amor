@@ -1,0 +1,174 @@
+{% block content %}
+<div class="container-fluid bg-body-secondary py-4">
+    <div class="row">
+        <!-- Calendario -->
+        <div class="col-lg-8 h-100">
+            <div class="card mb-4 p-4">
+                <h5 class="fw-semibold">Calendario Familiar</h5>
+                <div id="calendar"></div>
+            </div>
+
+            <div class="card p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="mb-0 fw-bold">Próximas Visitas y Tareas</h6>
+                    <a href="#" class="text-primary small d-flex align-items-center gap-1 text-decoration-none">
+                        Ver todas <i class="bi bi-chevron-right small"></i>
+                    </a>
+                </div>
+
+                <!-- Lista de tareas -->
+                <ul class="list-unstyled">
+                    <!-- Item 1 -->
+                    <li class="d-flex justify-content-between align-items-start bg-light rounded p-3 mb-2">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-circle p-2 d-flex justify-content-center align-items-center"
+                                style="background-color: rgba(99,102,241,0.1); width: 36px; height: 36px;">
+                                <i class="bi bi-capsule-fill text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="fw-semibold text-dark">Recoger medicamentos</div>
+                                <small class="text-muted">Lunes, 19 de mayo · 10:00</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-primary-subtle text-primary fw-medium rounded-pill">Asignado a ti</span>
+                    </li>
+
+                    <!-- Item 2 -->
+                    <li class="d-flex justify-content-between align-items-start bg-light rounded p-3 mb-2">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-circle p-2 d-flex justify-content-center align-items-center"
+                                style="background-color: rgba(253,186,116,0.2); width: 36px; height: 36px;">
+                                <i class="bi bi-calendar-heart text-warning"></i>
+                            </div>
+                            <div>
+                                <div class="fw-semibold text-dark">Cumpleaños de la abuela Isabel</div>
+                                <small class="text-muted">Viernes, 23 de mayo · Todo el día</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-warning-subtle text-warning fw-medium rounded-pill">Evento familiar</span>
+                    </li>
+
+                    <!-- Item 3 -->
+                    <li class="d-flex justify-content-between align-items-start bg-light rounded p-3 mb-2">
+                        <div class="d-flex gap-3 align-items-start">
+                            <div class="rounded-circle p-2 d-flex justify-content-center align-items-center"
+                                style="background-color: rgba(34,197,94,0.1); width: 36px; height: 36px;">
+                                <i class="bi bi-person-fill-check text-success"></i>
+                            </div>
+                            <div>
+                                <div class="fw-semibold text-dark">Visita regular</div>
+                                <small class="text-muted">Miércoles, 21 de mayo · 16:30</small>
+                            </div>
+                        </div>
+                        <span class="badge bg-success-subtle text-success fw-medium rounded-pill">Asignado a
+                            Carlos</span>
+                    </li>
+                </ul>
+
+                <!-- Botón añadir -->
+                <button
+                    class="btn btn-outline-secondary w-100 mt-3 d-flex justify-content-center align-items-center gap-2">
+                    <i class="bi bi-plus-lg"></i> Añadir nueva tarea
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Columna derecha: Estado + Asistente -->
+        <div class="col-lg-4 h-100">
+            <div class="card p-4 mb-4">
+                <h6 class="mb-3 fw-bold">Estado de tus seres queridos</h6>
+                <ul class="list-unstyled">
+                    <!-- Abuela Isabel -->
+                    <li class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-light p-2 d-flex align-items-center justify-content-center"
+                                style="width: 40px; height: 40px;">
+                                <span style="font-size: 20px;">👵</span>
+                            </div>
+                            <div>
+                                <div class="fw-semibold text-dark">Abuela Isabel</div>
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="dot bg-success"></span>
+                                    <small class="text-muted">Estable y animada</small>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi bi-three-dots-vertical text-muted"></i>
+                    </li>
+
+                    <!-- Abuelo Roberto -->
+                    <li class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-light p-2 d-flex align-items-center justify-content-center"
+                                style="width: 40px; height: 40px;">
+                                <span style="font-size: 20px;">👴</span>
+                            </div>
+                            <div>
+                                <div class="fw-semibold text-dark">Abuelo Roberto</div>
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="dot bg-warning"></span>
+                                    <small class="text-muted">Necesita atención</small>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="bi bi-three-dots-vertical text-muted"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card p-4 h-100">
+                <!-- Título con ícono -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="mb-0 fw-bold">Asistente IA</h6>
+                    <div class="rounded-circle d-flex align-items-center justify-content-center"
+                        style="width: 32px; height: 32px; background-color: rgba(139, 135, 202, 0.15);">
+                        <i class="bi bi-lock-fill" style="font-size: 16px; color: #6366f1;"></i>
+                    </div>
+                </div>
+
+                <!-- Resumen de la semana -->
+                <div class="bg-light rounded p-3 mb-4">
+                    <h6 class="mb-2 small fw-semibold text-dark">Resumen de la semana</h6>
+                    <p class="mb-0 text-muted small">
+                        La abuela Isabel ha estado más animada esta semana. Sus niveles de presión arterial se han
+                        mantenido estables. El abuelo Roberto necesita más atención con su medicación para la artritis.
+                    </p>
+                </div>
+
+                <!-- Sugerencias -->
+                <h6 class="mb-2 small text-muted fw-semibold">Sugerencias de conversación</h6>
+
+                <div class="d-flex gap-2 align-items-start bg-light rounded p-3 mb-2">
+                    <div class="rounded-circle bg-white p-1 d-flex justify-content-center align-items-center"
+                        style="width: 24px; height: 24px;">
+                        <i class="bi bi-chat-dots text-primary fs-6"></i>
+                    </div>
+                    <p class="small mb-0 text-muted">
+                        Pregúntale a la abuela sobre su viaje a Valencia en 1975. Mencionó que fue un momento especial
+                        para ella.
+                    </p>
+                </div>
+
+                <div class="d-flex gap-2 align-items-start bg-light rounded p-3">
+                    <div class="rounded-circle bg-white p-1 d-flex justify-content-center align-items-center"
+                        style="width: 24px; height: 24px;">
+                        <i class="bi bi-lightbulb text-warning fs-6"></i>
+                    </div>
+                    <p class="small mb-0 text-muted">
+                        El abuelo Roberto disfrutaría hablar sobre su colección de sellos. Hace tiempo que no la muestra
+                        a nadie.
+                    </p>
+                </div>
+
+                <!-- Botón final -->
+                <a href="#" class="btn btn-primary mt-4 w-100 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-robot"></i> Hablar con el asistente
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
