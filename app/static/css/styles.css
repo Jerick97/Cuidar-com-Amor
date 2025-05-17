@@ -9,6 +9,12 @@ body {
 	color: rgb(99, 102, 241);
 }
 
+.hover-effect:hover {
+	background-color: #f0f2f5;
+	color: rgb(99, 102, 241);
+	text-decoration: none;
+}
+
 .hero-section {
 	position: relative;
 	min-height: 480px;
@@ -22,6 +28,14 @@ body {
 		url("../img/hero.jpg") no-repeat right center;
 	background-size: cover;
 	z-index: 0;
+}
+
+@media (max-width: 768px) {
+	.hero-section {
+		/* Simplificamos para móvil: sin degradado */
+		background: url("../img/hero.jpg") no-repeat center center;
+		background-size: cover;
+	}
 }
 
 #calendar {
