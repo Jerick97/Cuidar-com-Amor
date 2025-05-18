@@ -13,7 +13,8 @@
                 <h5 class="mb-0 fw-bold">Notas y Emociones</h5>
                 <a href="#" class="text-primary"><i class="bi bi-plus-lg"></i></a>
             </div>
-
+            <!-- Contenedor dinámico para notas -->
+            <div id="notasContainer" class="overflow-auto flex-grow-1"></div>
             <!-- Nota 1 -->
             <div class="rounded p-3 mb-3 border-primario">
                 <div class="d-flex justify-content-between">
@@ -76,7 +77,7 @@
                 </div>
 
                 <!-- Mensajes -->
-                <div class="flex-grow-1 overflow-auto mb-3 px-1" style="max-height: 420px;">
+                <div id="chatContainer" class="flex-grow-1 overflow-auto mb-3 px-1" style="max-height: 420px;">
 
                     <!-- Mensaje del asistente -->
                     <div class="d-flex align-items-start mb-3">
@@ -84,7 +85,7 @@
                             <i class="bi bi-robot text-primary"></i>
                         </div>
                         <div class="bg-light-subtle text-dark rounded-3 p-3 shadow-sm" style="max-width: 80%;">
-                            <small>Hola Laura, ¿cómo puedo ayudarte hoy con el cuidado de tus abuelos?</small>
+                            <small>Hola Jerick, ¿cómo puedo ayudarte hoy con el cuidado de tus abuelos?</small>
                         </div>
                     </div>
 
@@ -100,7 +101,7 @@
                     </div>
 
                     <!-- Otro mensaje del asistente -->
-                    <div class="d-flex align-items-start">
+                    <div class="d-flex align-items-start mb-3">
                         <div class="rounded-circle bg-light p-2 me-2" style="width: 32px; height: 32px;">
                             <i class="bi bi-robot text-primary"></i>
                         </div>
@@ -118,9 +119,9 @@
                 <!-- Input de mensaje -->
                 <div class="border-top pt-2">
                     <div class="input-group">
-                        <input type="text" class="form-control border-0 shadow-none"
-                            placeholder="Escribe tu mensaje...">
-                        <button class="btn btn-primary" type="button">
+                        <input type="text" id="chatInput" class="form-control border-0 shadow-none"
+                            placeholder="Escribe tu mensaje..." required>
+                        <button class="btn btn-primary" id="sendMessage" type="button">
                             <i class="bi bi-send-fill"></i>
                         </button>
                     </div>
